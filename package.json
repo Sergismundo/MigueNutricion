@@ -1,0 +1,29 @@
+{
+  "name": "pug-sass-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev:serve": "live-server dist",
+    "dev:build": "nodemon --watch src build.js -e js,pug,sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidEspinola/pug-sass-boilerplate.git"
+  },
+  "author": "DavidEspinola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidEspinola/pug-sass-boilerplate/issues"
+  },
+  "homepage": "https://github.com/DavidEspinola/pug-sass-boilerplate#readme",
+  "devDependencies": {
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
+    "live-server": "^1.2.1",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0",
+    "sass": "^1.26.10"
+  }
+}

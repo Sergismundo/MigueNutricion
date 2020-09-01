@@ -1,0 +1,11 @@
+html
+  head
+    block head
+    block lib
+      link(rel="stylesheet", href="/global.css")
+  body
+    include header.pug
+    block content
+    block foot
+      #footer
+        p some footer content
