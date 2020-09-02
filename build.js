@@ -6,7 +6,7 @@ const sass = require('sass');
 const sassFiles = glob.sync('src/**/*.sass');
 const pageFiles = glob.sync('src/pages/**/*.pug');
 
-fs.removeSync('dist')
+fs.emptyDirSync('dist')
 
 sassFiles.forEach(path => {
     const fileContent = sass.renderSync({file: path}).css.toString()
