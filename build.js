@@ -3,8 +3,13 @@ const glob = require('glob')
 const fs = require('fs-extra')
 const sass = require('sass')
 
-const sassFiles = glob.sync('src/**/*.sass', { ignore: 'src/components/**/*' })
-const pageFiles = glob.sync('src/pages/**/*.pug')
+const publicSass = 'src/**/*.sass'
+const publicPages = 'src/**/*.pug'
+const privateComponents = 'src/components/**/*'
+
+const sassFiles = glob.sync(publicSass, { ignore: privateComponents })
+const pageFiles = glob.sync(publicPages, { ignore: privateComponents })
+const otherFiles = glob.sync('src/**/*', { ignore: [publicSass, publicPages, privateComponents] })
 
 fs.emptyDirSync('dist')
 
@@ -18,6 +23,10 @@ pageFiles.forEach(path => {
   const fileContent = pug.renderFile(path, { basedir: 'src' })
   const destination = toDestPath(path, 'pug', 'html')
   fs.outputFileSync(destination, fileContent)
+})
+
+otherFiles.forEach(path => {
+  fs.copySync(path, path.replace('src', 'dist'))
 })
 
 function toDestPath(path, originExtension, destExtension) {
