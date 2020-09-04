@@ -9,7 +9,7 @@ const privateComponents = 'src/components/**/*'
 
 const sassFiles = glob.sync(publicSass, { ignore: privateComponents })
 const pageFiles = glob.sync(publicPages, { ignore: privateComponents })
-const otherFiles = glob.sync('src/**/*', { ignore: [publicSass, publicPages, privateComponents] })
+const otherFiles = glob.sync('src/**/*.*', { ignore: [publicSass, publicPages, privateComponents] })
 
 fs.emptyDirSync('dist')
 
