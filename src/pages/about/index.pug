@@ -1,11 +1,15 @@
-extends /includes/layout.pug
+extends /components/layout/layout
+
 
 block head
-    title About
+  title About
 
 block append lib
-    link(rel="stylesheet", href="styles.css")
+  link(rel="stylesheet", href="styles.css")
+
+block prepend header
+  - const pageUrl = '/about'
 
 block content
-    .about
-        h1 About
+  .about
+    h1 About

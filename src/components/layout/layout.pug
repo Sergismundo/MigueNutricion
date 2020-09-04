@@ -1,0 +1,12 @@
+html
+  head
+    block head
+    block lib
+      link(rel="stylesheet", href="/global.css")
+  body
+    #layout
+      block header
+        include ../header/header
+      #content
+        block content
+      block foot

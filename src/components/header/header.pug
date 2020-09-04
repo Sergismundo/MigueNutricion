@@ -1,0 +1,9 @@
+- const activeClass = (url) => pageUrl === url ? 'active' : ''
+- const pages = [{ url: '/', text: 'Home'},{ url: '/about', text: 'About'}]
+
+header.main-header
+  h1: a(href="/") My page
+  ul
+    each page in pages
+      li(class=activeClass(page.url))
+        a(href=page.url)= page.text
