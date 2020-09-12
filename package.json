@@ -7,18 +7,10 @@
     "build": "node build.js",
     "serve": "run-p dev:build dev:serve",
     "dev:serve": "browser-sync start --server dist --files dist --no-ui",
-    "dev:build": "nodemon --watch src build.js -e '*'"
+    "dev:build": "nodemon --watch src build.js -e *"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DavidEspinola/pug-sass-boilerplate.git"
-  },
-  "author": "DavidEspinola",
+  "author": "Sergismundo",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DavidEspinola/pug-sass-boilerplate/issues"
-  },
-  "homepage": "https://github.com/DavidEspinola/pug-sass-boilerplate#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "browser-sync": "^2.26.12",
