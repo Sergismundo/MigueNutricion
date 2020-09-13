@@ -1,9 +1,9 @@
 - const activeClass = (url) => pageUrl === url ? 'active' : ''
-- const pages = [{ url: '/', text: 'Home'},{ url: '/about', text: 'About'}]
+- const pages = [{ url: '/', text: 'Inicio'},{ url: '/contacto', text: 'Contacto'},{ url: '/sobremi', text: 'Sobre Mí'}]
 
 header.main-header
   h1
-    a(href="/")
+    a(href="/" class="logo")
       img(src="/favicon.ico")
       | Miguel Nutrición
   ul
